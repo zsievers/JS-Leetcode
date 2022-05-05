@@ -4,7 +4,7 @@ function twoSum(nums, target) {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
     const diff = target - nums[i];
-    if (map[diff] !== undefined) {
+    if (map.hasOwnProperty(diff)) {
       return [map[diff], i];
     } else {
       map[nums[i]] = i;
